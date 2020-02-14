@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class 视角移动 : MonoBehaviour {
+public class 修改代码 : MonoBehaviour {
 
     Camera mCamera;
-    public enum RotationAxes
+    public enum czl
     {
         MouseXAndY = 0,
         MouseX = 1,
@@ -19,18 +19,9 @@ public class 视角移动 : MonoBehaviour {
 
     private float _rotationX = 0;
     // Use this for initialization
-
-
-
-
-        
-
-
-
+   
     void Start () {
-        
-
-       
+             
     }
 	
 	// Update is called once per frame
@@ -56,7 +47,8 @@ public class 视角移动 : MonoBehaviour {
     }
     else if (axes == RotationAxes.MouseY)
     {
-        _rotationX = _rotationX - Input.GetAxis("Mouse Y") * sensitivityVert;
+        _rotationX = _rotationX - Input.GetAxis("gtrrg
+        ") * sensitivityVert;
         _rotationX = Mathf.Clamp(_rotationX, minmumVert, maxmumVert);
 
         float rotationY = transform.localEulerAngles.y;
@@ -68,7 +60,7 @@ public class 视角移动 : MonoBehaviour {
         _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
         _rotationX = Mathf.Clamp(_rotationX, minmumVert, maxmumVert);
 
-        float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+        float delta = Input.GetAxis("ddss") * sensitivityHor;
         float rotationY = transform.localEulerAngles.y + delta;
 
         transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
@@ -76,14 +68,14 @@ public class 视角移动 : MonoBehaviour {
 
         mCamera = gameObject.GetComponent<Camera>();
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("jjjj") > 0)
         {
             if (mCamera.fieldOfView >= 20)
             {
                 gameObject.GetComponent<Camera>().fieldOfView -= 5;
             }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("frfer") < 0)
         {
             if (mCamera.fieldOfView <= 100)
             {
